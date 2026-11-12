@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>website</title>
+  <title>Nasi Cokot – Sekali Cokot, Langsung Kenyang</title>
+  <meta name="description" content="Nasi cokot porsi pas dengan lauk dan sambal. Pesan online, antar atau ambil sendiri.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Navigasi utama">
+      <a class="logo" href="#atas">Nasi<span>Cokot</span></a>
+      <ul>
+        <li class="hide-m"><a href="#menu">Menu</a></li>
+        <li class="hide-m"><a href="#kenapa">Keunggulan</a></li>
+        <li class="hide-m"><a href="#testimoni">Testimoni</a></li>
+        <li class="hide-m"><a href="#kontak">Kontak</a></li>
+        <li><button class="btn-cart" id="openCart">Keranjang (<span id="count">0</span>)</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="atas">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Sekali cokot, <em>langsung kenyang.</em></h1>
+        <p>Nasi cokot porsi pas genggam, lauk lengkap, sambal buatan sendiri. Cocok untuk sarapan, bekal kuliah, atau camilan berat.</p>
+        <a class="btn" href="#menu">Pesan sekarang</a>
+        <a class="btn ghost" href="#kenapa">Kenapa Nasi Cokot?</a>
+      </div>
+      <div class="bungkus" aria-hidden="true">
+        <div class="emoji">🍙</div>
+        <strong>Mulai Dari Rp 5.000</strong>
+        <small>Dibungkus daun &amp; kertas nasi</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <h2>Menu Nasi Cokot</h2>
+      <p class="sub">Pilih varian favoritmu, tambahkan ke keranjang, lalu kirim pesanan lewat WhatsApp.</p>
+      <div class="grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <section id="kenapa" class="alt">
+    <div class="wrap">
+      <h2>Kenapa pilih kami</h2>
+      <p class="sub">Dibuat sederhana, dimasak segar, dan harganya ramah di kantong mahasiswa.</p>
+      <div class="fitur">
+        <div><h3>Porsi pas</h3><p>Tidak terlalu banyak, tidak terlalu sedikit. Bisa ditambah kalau masih lapar.</p></div>
+        <div><h3>Dimasak setiap hari</h3><p>Nasi dan lauk dimasak pagi hari supaya tetap hangat dan segar.</p></div>
+        <div><h3>Harga terjangkau</h3><p>Mulai dari Rp 5.000 per bungkus, ada diskon untuk pesanan banyak.</p></div>
+        <div><h3>Pesan mudah</h3><p>Pilih menu di website, pesanan langsung terkirim ke WhatsApp penjual.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimoni">
+    <div class="wrap">
+      <h2>Kata pelanggan</h2>
+      <p class="sub">Ulasan Pelanggan.</p>
+      <div class="testi">
+        <blockquote><p>Sambalnya mantap, porsinya pas buat sarapan sebelum kelas.</p><footer>Nia, mahasiswa</footer></blockquote>
+        <blockquote><p>Praktis dibawa ke kantor. Rasanya konsisten dan harganya murah.</p><footer>Bagas, karyawan</footer></blockquote>
+        <blockquote><p>Sering pesan 20 bungkus untuk acara kumpul, selalu habis.</p><footer>Heru, ketua panitia</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="kontak">
+    <div class="wrap">
+      <h2>Hubungi kami</h2>
+      <p>Ada pertanyaan atau mau pesan dalam jumlah besar? Hubungi kami langsung.</p>
+      <div class="info">
+        <div><strong>WhatsApp</strong><br>0812-3456-7890</div>
+        <div><strong>Jam buka</strong><br>Setiap hari, 09.00 – 17.00 WIB</div>
+        <div><strong>Lokasi</strong><br>Jl. Jatiwaringin Raya Nomor 12, Jaticempaka, Pondok Gede, Bekasi, Jawa Barat.</div>
+        <div><strong>Instagram</strong><br>@nasicokot.official</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">© 2026 Nasi Cokot. Dibuat untuk tugas Enterpreneur Teknologi.</footer>
+
+<!-- Keranjang -->
+<div id="overlay"></div>
+<aside id="panel" aria-label="Keranjang belanja">
+  <button class="tutup" id="closeCart" aria-label="Tutup keranjang">×</button>
+  <h2>Keranjang</h2>
+  <div id="items"></div>
+  <label for="nama">Nama</label>
+  <input id="nama" type="text" placeholder="Nama kamu">
+  <label for="alamat">Alamat / catatan</label>
+  <textarea id="alamat" rows="2" placeholder="Alamat antar atau 'ambil sendiri'"></textarea>
+  <div class="total"><span>Total</span><span id="total">Rp 0</span></div>
+  <button class="btn" id="checkout">Pesan via WhatsApp</button>
+</aside>
+<div id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
